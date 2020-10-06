@@ -7,19 +7,19 @@ class Dipendente{
 
     public function __construct($_nome,$_cognome,$_cf){
 
-        
+
         if(!is_string($_nome)){
-            die('errore');
+             throw new Exception("Nome non Valido");
         }
 
         if(!is_string($_cognome)){
-            die('errore');
+             throw new Exception("cognome non Valido"
         }
 
 
 
         if(strlen($_cf)<>16 || !is_string($_cf)){
-            die('Il codice fiscale non è corretto');
+            throw new Exception("codice fiscale inserito non valido");
         }
 
         $this->nome=$_nome;

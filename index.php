@@ -13,3 +13,9 @@ var_dump($dipendente,$dipendente2,$dipendente3);
 
 $dipendente->setSpecificheContratto('contratto determinato');
 echo $dipendente->getSpecificheContratto();
+
+try {
+    $dipendente4 = new Dipendente('Enrico', 'Imbimbo', '29/06/1985', 'qwertyf634dshfy', 'operaio');
+} catch (Exception $e) {
+    echo 'eccezione: ' . $e->getMessage();
+}

@@ -7,7 +7,7 @@ class Amministrativo extends Dipendente{
         parent::__construct($_nome,$_cognome,$_cf);
 
         if(!is_string($_ruolo)){
-            die('errore');
+            throw new Exception("codice fiscale inserito non valido");
         }
 
         $this->ruolo=$_ruolo;
